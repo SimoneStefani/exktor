@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.SimoneStefani.exktor:ktor-consul:1.0.0")
+    implementation("com.github.SimoneStefani.exktor:ktor-consul:1.1.0")
 }
 ```
 

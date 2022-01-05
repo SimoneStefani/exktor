@@ -7,6 +7,7 @@ ExKtor - it's set of extension libraries for Ktor that simplify integration with
 * [ktor-consul](ktor-consul/README.md)
 * [ktor-elastic](ktor-elastic/README.md)
 * [ktor-exposed](ktor-exposed/README.md)
+* [ktor-ktorm](ktor-ktorm/README.md)
 * [ktor-flyway](ktor-flyway/README.md)
 * [ktor-sql](ktor-sql/README.md)
 
