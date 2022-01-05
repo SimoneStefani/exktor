@@ -1,9 +1,17 @@
 package dev.simonestefani.ktor.sql
 
 import com.zaxxer.hikari.HikariConfig
-import io.ktor.application.*
 import io.ktor.util.AttributeKey
 import com.zaxxer.hikari.HikariDataSource
+import io.ktor.application.Application
+import io.ktor.application.ApplicationEnvironment
+import io.ktor.application.ApplicationEvents
+import io.ktor.application.ApplicationFeature
+import io.ktor.application.ApplicationStarted
+import io.ktor.application.ApplicationStopPreparing
+import io.ktor.server.engine.ApplicationEngineEnvironment
+import kotlinx.coroutines.CompletableDeferred
+import kotlinx.coroutines.launch
 import org.slf4j.LoggerFactory
 import kotlin.system.exitProcess
 
@@ -41,7 +49,7 @@ class SqlFeature private constructor(
             pipeline.attachDataSource(dataSource)
             monitor.raise(DBConnected, dataSource)
         } else {
-            exitProcess(1)
+            app.doShutdown(1)
         }
     }
 
@@ -120,3 +128,23 @@ class SqlFeature private constructor(
         }
     }
 }
+
+fun Application.doShutdown(status: Int) {
+    LoggerFactory.getLogger(javaClass).warn("Server is shutting down...")
+
+    val latch = CompletableDeferred<Nothing>()
+    launch {
+        latch.join()
+
+        environment.monitor.raise(ApplicationStopPreparing, environment)
+        if (environment is ApplicationEngineEnvironment) {
+            (environment as ApplicationEngineEnvironment).stop()
+        } else {
+            dispose()
+        }
+
+        exitProcess(status)
+    }
+    latch.cancel()
+}
+
