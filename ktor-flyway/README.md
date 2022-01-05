@@ -14,6 +14,6 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.SimoneStefani.exktor:ktor-flyway:1.1.0")
+    implementation("com.github.SimoneStefani.exktor:ktor-flyway:1.1.1")
 }
 ```

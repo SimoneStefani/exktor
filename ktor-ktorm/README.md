@@ -15,6 +15,6 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.SimoneStefani.exktor:ktor-ktorm:1.1.0")
+    implementation("com.github.SimoneStefani.exktor:ktor-ktorm:1.1.1")
 }
 ```

@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.SimoneStefani.exktor:ktor-elastic:1.1.0")
+    implementation("com.github.SimoneStefani.exktor:ktor-elastic:1.1.1")
 }
 ```
 

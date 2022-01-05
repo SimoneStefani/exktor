@@ -1,3 +1,5 @@
+package dev.simonestefani.ktor.ktorm
+
 import dev.simonestefani.ktor.sql.DBConnected
 import io.ktor.application.Application
 import io.ktor.application.ApplicationEvents
