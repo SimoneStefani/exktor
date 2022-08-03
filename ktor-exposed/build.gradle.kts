@@ -1,5 +1,5 @@
 dependencies {
-    api("org.postgresql:postgresql:42.4.0")
+    api("org.postgresql:postgresql:42.4.1")
     api("org.jetbrains.exposed:exposed-core:0.39.1")
     api("org.jetbrains.exposed:exposed-dao:0.39.1")
     api("org.jetbrains.exposed:exposed-jdbc:0.39.1")
