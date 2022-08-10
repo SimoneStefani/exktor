@@ -1,4 +1,4 @@
 dependencies {
-    api("org.flywaydb:flyway-core:9.1.2")
+    api("org.flywaydb:flyway-core:9.1.3")
     api(project(":ktor-sql"))
 }
