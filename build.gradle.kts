@@ -36,7 +36,7 @@ subprojects {
 
         implementation(kotlin("stdlib-jdk8"))
         implementation(kotlin("reflect"))
-        implementation("io.ktor:ktor-server-core:1.6.8")
+        implementation("io.ktor:ktor-server-core:2.1.0")
     }
 
     val sourcesJar by tasks.registering(Jar::class) {
