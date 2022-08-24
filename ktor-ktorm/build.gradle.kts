@@ -1,5 +1,5 @@
 dependencies {
-    api("org.postgresql:postgresql:42.4.2")
+    api("org.postgresql:postgresql:42.5.0")
     api("org.ktorm:ktorm-core:3.5.0")
     api("org.ktorm:ktorm-support-postgresql:3.5.0")
     api("org.ktorm:ktorm-global:3.5.0")
