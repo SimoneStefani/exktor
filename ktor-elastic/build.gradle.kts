@@ -1,3 +1,3 @@
 dependencies {
-    api("org.elasticsearch.client:elasticsearch-rest-client:8.3.3")
+    api("org.elasticsearch.client:elasticsearch-rest-client:8.4.0")
 }
